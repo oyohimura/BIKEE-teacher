@@ -1,2 +1,17 @@
-<h1>Bikes#index</h1>
-<p>Find me in app/views/bikes/index.html.erb</p>
+<div class="container mt-5">
+  <h1 class="mb-4">Bikes</h1>
+  <%= link_to 'Create Bike', new_bike_path, class: 'btn btn-primary mb-3' %>
+  <div class="row">
+    <% @bikes.each do |bike| %>
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title"><%= bike.brand %></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><%= bike.model %></h6>
+            <p class="card-text">$<%= bike.price %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
