@@ -1,0 +1,6 @@
+<%= simple_form_for bike do |f| %>
+  <%= f.input :brand, label: 'Brand', input_html: { class: 'form-control' } %>
+  <%= f.input :model, label: 'Model', input_html: { class: 'form-control' } %>
+  <%= f.input :price, as: :range, label: 'Price', input_html: { class: 'form-control', min: 0, max: 100, step: 5 } %>
+  <%= f.button :submit, 'Create Bike', class: 'btn btn-primary' %>
+<% end %>
